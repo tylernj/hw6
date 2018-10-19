@@ -15,10 +15,20 @@ def sumNums(fileName):
 
 
 
-    return sum(L_2) 
+    return sum(L_2)
 
 def countWord(fileName, word):
-    pass
+    read_file = open(fileName, "r")
+    read_file = read_file.readlines()
+
+    new_list = []
+
+    for x in read_file:
+        y = x.lower()
+        sum_words = re.findall(r"\b{}\b".format(word), y)
+        new_list = new_list + sum_words
+
+    return len(new_list)
 
 def listURLs(fileName):
     pass
