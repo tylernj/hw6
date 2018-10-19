@@ -2,7 +2,20 @@ import re
 import unittest
 
 def sumNums(fileName):
-    pass
+    read_file = open(fileName, "r")
+    read_file = read_file.readlines()
+    L = []
+    for x in read_file:
+        sum_nums = re.findall('[0-9]+', x)
+        L = L + sum_nums
+
+    L_2 = []
+    for x in L:
+        L_2.append(int(x))
+
+
+
+    return sum(L_2) 
 
 def countWord(fileName, word):
     pass
