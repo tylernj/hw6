@@ -33,13 +33,13 @@ def countWord(fileName, word):
 def listURLs(fileName):
     read_file = open(fileName, "r")
     read_file = read_file.readlines()
-    URL_list = []
+    URL_l = []
 
     for x in read_file:
         URL_find = re.findall(r"\bwww.\b", x)
         URL_list = URL_list + URL_find
 
-    return URL_list
+    return URL_l
 
 
 class TestHW6(unittest.TestCase):
